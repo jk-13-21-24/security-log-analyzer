@@ -10,6 +10,7 @@ Purpose: Cybersecurity / SOC learning project
 from .parser import AuthLogParser
 from .detector import AuthenticationDetector
 from .reporter import IncidentReporter
+from .json_reporter import JSONReporter
 
 
 def main():
@@ -139,6 +140,21 @@ def main():
             f"\n[+] Generated: "
             f"{report_path}"
         )
+    
+    # Step 5: Export detections as JSON
+    # --------------------------------------------------
+
+    json_reporter = JSONReporter()
+
+    json_path = json_reporter.export(
+        detections,
+    )
+
+    print(
+        f"\n[+] JSON Export: "
+        f"{json_path}"
+    )
+
 
 
 if __name__ == "__main__":
