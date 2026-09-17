@@ -61,3 +61,23 @@ concepts including:
                            │
                            ▼
                    Markdown Reports
+
+---
+
+✨ Features
+Authentication Log Parsing
+
+The parser extracts:
+
+Timestamp
+Hostname
+Event type
+Username
+Source IP address
+Source port
+
+Supported authentication events include:
+
+Failed login
+Successful login
+Invalid user
